@@ -1,28 +1,9 @@
-== README
+== Texas Holdem Simulator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A silly little card game simulator I started building while on vacation, inspired by a programming challenge on reddit. This app selects a random number of players to begin the game with, and deals everyone two cards. You see your own cards but no one else's. At this point, the only thing you can do is bet once and see the flop. I'd like to add more features at some point, such as:
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- Ability to play a full hand and start a new one (and have the dealer button move around the table)
+- Ability to continuation-bet in each round of betting (i.e. re-raise if someone raises you)
+- Ability to guess your pot odds at each round and see if you're correct, and maybe measure your accuracy
+- Players will come and go from the table after each hand
