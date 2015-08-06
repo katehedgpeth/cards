@@ -1,0 +1,273 @@
+/* line 22, ../sass/main.sass */
+body {
+  background-color: #eee;
+  color: #444;
+  font-family: "avenir";
+}
+
+/* line 28, ../sass/main.sass */
+.content {
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  display: flex;
+}
+/* line 34, ../sass/main.sass */
+.content .actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 20px auto;
+  text-align: center;
+}
+/* line 43, ../sass/main.sass */
+.content .actions .betBtn {
+  margin-bottom: 0;
+}
+/* line 46, ../sass/main.sass */
+.content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* line 51, ../sass/main.sass */
+.content .btn.btn-default {
+  background-color: #eeeeee;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+  background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
+  border: 1px solid #ccc;
+}
+/* line 56, ../sass/main.sass */
+.content .btn.btn-small {
+  padding: 5px 10px;
+  font-size: 0.7em;
+}
+/* line 61, ../sass/main.sass */
+.content #table {
+  flex: 3;
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+/* line 69, ../sass/main.sass */
+.content #table #top, .content #table #bottom {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+}
+/* line 74, ../sass/main.sass */
+.content #table #top .spacer, .content #table #bottom .spacer {
+  flex: 1;
+}
+/* line 77, ../sass/main.sass */
+.content #table #top .players, .content #table #bottom .players {
+  display: flex;
+  flex: 2;
+  align-items: stretch;
+}
+/* line 82, ../sass/main.sass */
+.content #table #top .players .player, .content #table #bottom .players .player {
+  flex: 1;
+}
+/* line 87, ../sass/main.sass */
+.content #table #middle {
+  display: flex;
+  flex: 2;
+  align-items: stretch;
+}
+/* line 92, ../sass/main.sass */
+.content #table #middle #left, .content #table #middle #right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* line 97, ../sass/main.sass */
+.content #table #middle .players {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+/* line 103, ../sass/main.sass */
+.content #table #middle .players .player {
+  flex: 1;
+}
+/* line 110, ../sass/main.sass */
+.content #table .player {
+  margin: 5px;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+/* line 118, ../sass/main.sass */
+.content #table .player.playing {
+  opacity: 1;
+}
+/* line 121, ../sass/main.sass */
+.content #table .player .stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 125, ../sass/main.sass */
+.content #table .player .stack p {
+  text-align: center;
+}
+/* line 128, ../sass/main.sass */
+.content #table .player .button {
+  margin-left: 10px;
+}
+/* line 132, ../sass/main.sass */
+.content #table .player .button.dealer:after {
+  background: yellow;
+  border: 1px solid #dfdf09;
+  content: "D";
+  font-size: 0.6em;
+  padding: 0.6em 0.8em;
+  border-radius: 50%;
+  line-height: 0.5em;
+}
+/* line 141, ../sass/main.sass */
+.content #table .player .button.sb:after, .content #table .player .button.bb:after {
+  background: #fff;
+  padding: 0.6em;
+  line-height: 1em;
+  border-radius: 50%;
+  font-size: 0.5em;
+}
+/* line 148, ../sass/main.sass */
+.content #table .player .button.sb:after {
+  content: "Sb";
+  border: 1px solid red;
+  color: red;
+}
+/* line 153, ../sass/main.sass */
+.content #table .player .button.bb:after {
+  content: "Bb";
+  border: 1px solid blue;
+  color: blue;
+}
+/* line 158, ../sass/main.sass */
+.content #table #table-surface {
+  flex: 2;
+  border-radius: 10px;
+  background-color: #2E762C;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+/* line 167, ../sass/main.sass */
+.content #table #table-surface .tableRow {
+  display: flex;
+}
+/* line 170, ../sass/main.sass */
+.content #table #table-surface .bottomRow, .content #table #table-surface .topRow {
+  height: 50px;
+}
+/* line 172, ../sass/main.sass */
+.content #table #table-surface .bottomRow .spacer, .content #table #table-surface .topRow .spacer {
+  flex: 1;
+}
+/* line 174, ../sass/main.sass */
+.content #table #table-surface .bottomRow .bets, .content #table #table-surface .topRow .bets {
+  flex: 2;
+  display: flex;
+}
+/* line 177, ../sass/main.sass */
+.content #table #table-surface .bottomRow .bets .bet, .content #table #table-surface .topRow .bets .bet {
+  flex: 1;
+  color: #fff;
+}
+/* line 180, ../sass/main.sass */
+.content #table #table-surface .bottomRow .bets .bet:last-child, .content #table #table-surface .topRow .bets .bet:last-child {
+  text-align: right;
+}
+/* line 183, ../sass/main.sass */
+.content #table #table-surface .middleRow {
+  flex: 1;
+}
+/* line 185, ../sass/main.sass */
+.content #table #table-surface .middleRow .bets {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+}
+/* line 189, ../sass/main.sass */
+.content #table #table-surface .middleRow .bets .bet {
+  flex: 1;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* line 196, ../sass/main.sass */
+.content #table #table-surface .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 201, ../sass/main.sass */
+.content #table #table-surface .cards #flop {
+  display: flex;
+  flex: 3;
+  justify-content: center;
+}
+/* line 206, ../sass/main.sass */
+.content #table #table-surface .cards #turn, .content #table #table-surface .cards #river {
+  flex: 1;
+}
+/* line 209, ../sass/main.sass */
+.content #table .cards {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+/* line 214, ../sass/main.sass */
+.content #table .cards .card {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 60px;
+  width: 50px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 24px;
+  background-color: #fff;
+}
+/* line 226, ../sass/main.sass */
+.content #table .cards .card p {
+  margin: 0;
+}
+/* line 229, ../sass/main.sass */
+.content #table .cards .card.Clubs {
+  color: green;
+}
+/* line 231, ../sass/main.sass */
+.content #table .cards .card.Spades {
+  color: #b214dd;
+}
+/* line 233, ../sass/main.sass */
+.content #table .cards .card.Hearts {
+  color: red;
+}
+/* line 235, ../sass/main.sass */
+.content #table .cards .card.Diamonds {
+  color: blue;
+}
+/* line 240, ../sass/main.sass */
+.content #table .playing.opponent .card.Clubs, .content #table .playing.opponent .card.Spades, .content #table .playing.opponent .card.Hearts, .content #table .playing.opponent .card.Diamonds {
+  color: #fff;
+}

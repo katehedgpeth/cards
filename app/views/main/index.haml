@@ -1,0 +1,154 @@
+.content
+	#table
+		#top.seats
+			.spacer.actions
+				.bet
+					%p.betAmount
+						$
+						%span 0
+					%p.changeBet
+						%a.btn.btn-small.btn-default.minus{ :disabled => true,  :data => { :amount => "10" }} -10
+						%a.btn.btn-small.btn-default.minus{ :disabled => true,  :data => { :amount => "5" }} -5
+						%a.btn.btn-small.btn-default.plus{ :data => { :amount => "5" }} +5
+						%a.btn.btn-small.btn-default.plus{ :data => { :amount => "10" }} +10
+					%p
+						%a#betBtn.btn.btn-default{ :data => { :size => "0" }} Bet
+			.players
+				#player1.player{ :data => { :seat => "1" } }
+					%p.name Player 1
+					.stack
+						%p
+							$
+							%span 1000
+						.button.dealer
+					.cards
+						.card1.card{ :data => { :card => "1" } }
+						.card2.card{ :data => { :card => "2" } }
+					.bet &nbsp;
+				#player2.player{ :data => { :seat => "2" } }
+					%p.name Player 2
+					.stack
+						%p
+							$
+							%span 1000
+						.button.sb
+					.cards
+						.card1.card{ :data => { :card => "1" } }
+						.card2.card{ :data => { :card => "2" } }
+					.bet &nbsp;
+			.spacer
+		#middle
+			#left.seats
+				.players
+					#player8.player{ :data => { :seat => "8" } }
+						%p.name Player 8
+						.stack
+							%p
+								$
+								%span 1000
+							.button
+						.cards
+							.card1.card{ :data => { :card => "1" } }
+							.card2.card{ :data => { :card => "2" } }
+						.bet &nbsp;
+					#player7.player{ :data => { :seat => "7" } }
+						%p.name Player 7
+						.stack
+							%p
+								$
+								%span 1000
+							.button
+						.cards
+							.card1.card{ :data => { :card => "1" } }
+							.card2.card{ :data => { :card => "2" } }
+						.bet &nbsp;
+			#table-surface
+				.topRow.tableRow
+					.spacer
+					.bets
+						.bet{ :data => { :seat => "1"}}
+							%p
+						.bet{ :data => { :seat => "2"}}
+							%p
+					.spacer
+				.middleRow.tableRow
+					.bets
+						.bet{ :data => { :seat => "8"}}
+							%p
+						.bet{ :data => { :seat => "7"}}
+							%p					
+					.cards
+						#flop
+							.card1.card{ :data => { :card => "1" } }
+							.card2.card{ :data => { :card => "2" } }
+							.card3.card{ :data => { :card => "3" } }
+						#turn
+							.card
+						#river
+							.card
+					.bets
+						.bet{ :data => { :seat => "3"}}
+							%p
+						.bet{ :data => { :seat => "4"}}
+							%p					
+				.bottomRow.tableRow
+					.spacer
+					.bets
+						.bet{ :data => { :seat => "6"}}
+							%p
+						.bet{ :data => { :seat => "5"}}
+							%p
+					.spacer				
+
+
+			#right.seats
+				.players
+					#player3.player{ :data => { :seat => "3" } }
+						%p.name Player 3
+						.stack
+							%p
+								$
+								%span 1000
+							.button.bb
+						.cards
+							.card1.card{ :data => { :card => "1" } }
+							.card2.card{ :data => { :card => "2" } }
+						.bet &nbsp;
+					#player4.player{ :data => { :seat => "4" } }
+						%p.name Player 4
+						.stack
+							%p
+								$
+								%span 1000
+							.button
+						.cards
+							.card1.card{ :data => { :card => "1" } }
+							.card2.card{ :data => { :card => "2" } }
+						.bet &nbsp;
+		#bottom.seats
+			.spacer
+			.players
+				#player6.player{ :data => { :seat => "6" } }
+					%p.name Player 6
+					.stack
+						%p
+							$
+							%span 1000
+						.button
+					.cards
+						.card1.card{ :data => { :card => "1" } }
+						.card2.card{ :data => { :card => "2" } }
+					.bet &nbsp;
+				#player5.player{ :data => { :seat => "5" } }
+					%p.name Player 5
+					.stack
+						%p
+							$
+							%span 1000
+						.button
+					.cards
+						.card1.card{ :data => { :card => "1" } }
+						.card2.card{ :data => { :card => "2" } }
+					.bet &nbsp;
+			.spacer
+%footer

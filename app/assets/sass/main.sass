@@ -1,0 +1,241 @@
+//  Welcome to Compass.
+//  In this file you should write your main styles. (or centralize your imports)
+//  Import this file using the following HTML or equivalent:
+//  <link href="/stylesheets/compass.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+
+@import compass
+
+
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// @import 'nib'
+// // @import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+// global-reset()
+
+
+$main: #fa5b4d
+
+body
+	background-color: #eee
+	color: #444
+	font-family: 'avenir'
+
+
+.content
+	width: 80%
+	margin: 20px auto
+	overflow: hidden
+	display: flex
+
+	.actions
+		flex: 1
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		justify-content: flex-end
+		margin: 20px auto
+		text-align: center
+
+		.betBtn
+			margin-bottom: 0
+
+	.btn
+		display: inline-block
+		padding: 10px 20px
+		border-radius: 8px
+		cursor: pointer
+		&.btn-default
+			background-color: #eeeeee // Old browsers
+			+background-image(linear-gradient(to bottom, white, #eeeeee))
+
+			border: 1px solid #ccc
+		&.btn-small
+			padding: 5px 10px
+			font-size: 0.7em
+
+
+	#table
+		flex: 3
+		width: 800px
+		height: 800px
+		margin:	0 auto
+		display:	flex
+		flex-direction: column
+		
+		#top, #bottom
+			display: flex
+			flex: 1
+			align-items: stretch
+			
+			.spacer
+				flex: 1
+
+			.players
+				display: flex
+				flex: 2
+				align-items: stretch
+				
+				.player
+					flex: 1
+		#bottom .player
+			// transform: rotate(180deg)
+
+		#middle
+			display: flex
+			flex: 2
+			align-items: stretch
+			
+			#left, #right
+				flex: 1
+				display: flex
+				flex-direction: column
+			
+			.players
+				flex: 1
+				display: flex
+				flex-direction: column	
+				align-items: stretch
+				
+				.player
+					flex: 1
+			#left .player
+				// transform: rotate(-90deg)
+			#right .player
+				// transform: rotate(90deg)
+				
+		.player
+			margin: 5px
+			flex: 1
+			text-align: center
+			display: flex
+			flex-direction: column
+			justify-content: center
+			opacity: 0
+			&.playing
+				opacity: 1
+
+			.stack
+				display: flex
+				align-items: center
+				justify-content: center
+				p
+					text-align: center
+
+			.button
+				margin-left: 10px
+
+
+				&.dealer:after
+					background: yellow
+					border: 1px solid rgb(223, 223, 9)
+					content: 'D'
+					font-size: 0.6em
+					padding: 0.6em 0.8em
+					border-radius: 50%
+					line-height: 0.5em
+					// position: absolute
+				&.sb:after, &.bb:after
+					background: #fff
+					padding: 0.6em
+					// position: absolute
+					line-height: 1em
+					border-radius: 50%
+					font-size: 0.5em
+				&.sb:after
+					content: 'Sb'
+					border: 1px solid red
+					color: red
+
+				&.bb:after
+					content: 'Bb'
+					border: 1px solid blue
+					color: blue
+
+		#table-surface
+			flex: 2
+			border-radius: 10px
+			background-color: #2E762C
+			// margin -100px
+			z-index: -1
+			display: flex
+			flex-direction: column
+
+			.tableRow
+				display: flex
+
+			.bottomRow, .topRow
+				height: 50px
+				.spacer
+					flex: 1
+				.bets
+					flex: 2
+					display: flex
+					.bet
+						flex: 1
+						color: #fff
+						&:last-child
+							text-align: right
+
+			.middleRow
+				flex: 1
+				.bets
+					width: 50px
+					display: flex
+					flex-direction: column
+					.bet
+						flex: 1
+						color: #fff
+						display: flex
+						flex-direction: column
+						justify-content: center
+
+			.cards
+				display: flex
+				align-items: center
+				justify-content: center
+
+				#flop
+					display: flex
+					flex: 3
+					justify-content: center
+
+				#turn, #river
+					flex: 1
+
+		.cards
+			display: flex
+			width: 100%
+			justify-content: center
+			
+			.card
+				border: 1px solid #ccc
+				border-radius: 3px
+				height: 60px
+				width: 50px
+				margin: 5px
+				display: flex
+				flex-direction: column
+				justify-content: center
+				font-size: 24px
+				background-color: #fff
+
+				p
+					margin: 0
+
+				&.Clubs
+					color: green
+				&.Spades
+					color: rgb(178, 20, 221)
+				&.Hearts
+					color: red
+				&.Diamonds
+					color: blue
+
+		.playing
+			&.opponent .card
+				&.Clubs, &.Spades, &.Hearts, &.Diamonds
+					color: #fff
